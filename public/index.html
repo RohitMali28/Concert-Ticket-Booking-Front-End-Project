@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concert Ticket Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Home Page (Ticket Booking Form) -->
+    <div class="booking-form">
+        <h1>Coldplay Concert Booking</h1>
+
+        <label for="concertDate">Select a Concert Date and Venue:</label>
+        <select id="concertDate">
+            <option value="">Select a Date and Venue</option>
+            <option value="2024-10-15-London">October 15, 2024 - London</option>
+            <option value="2024-11-10-NewYork">Novemr 10, 2024 - New York</option>
+            <option value="2024-12-05-Sydney">December 5, 2024 - Sydney</option>
+        </select>
+
+        <label for="ticketType">Select Ticket Type:</label>
+        <select id="ticketType">
+            <option value="">Select a Ticket Type</option>
+            <option value="80">General Admission ($80)</option>
+            <option value="150">VIP ($150)</option>
+        </select>
+
+        <label for="ticketQuantity">Select Ticket Quantity:</label>
+        <input type="number" id="ticketQuantity" min="1" placeholder="Number of Tickets">
+
+        <button id="confirmButton">Confirm Booking</button>
+
+        <p id="errorMessage" class="error-message"></p>
+    </div>
+
+    <!-- Booking Summary -->
+    <div class="booking-summary" id="summary" style="display: none;">
+        <h2>Booking Summary</h2>
+        <p id="summaryConcert"></p>
+        <p id="summaryTicketType"></p>
+        <p id="summaryQuantity"></p>
+        <p id="summaryTotalPrice"></p>
+
+        <button id="editBookingButton">Edit Booking</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
